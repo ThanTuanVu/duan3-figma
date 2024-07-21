@@ -1,11 +1,99 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+:root {
+  --header-bg: #10375c;
 }
 
-body{
-    font-size: 1.6rem;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Sora", sans-serif;
+}
+
+/* =======================common(thuộc tính chung)================== */
+.main-content {
+  margin: 0 auto;
+  width: 1170px;
+  max-width: calc(100% - 48px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  width: 205px;
+  line-height: 60px;
+  border-radius: 999px;
+  background: #2e80ce;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ===========header============== */
+.header {
+  padding-top: 30px;
+  background: var(--header-bg);
+  min-height: 100vh; /*nền bằng 100% khung nhìn*/
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.header__action--login,
+.nav__link {
+  color: #c9d2da;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  padding: 8px 21px;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: #fff;
+  font-size: 1.6rem;
+  /* font-weight: 400; */
+  text-shadow: 1px 0 0 currentColor;
+  line-height: 1.75;
+}
+
+.nav__link--active::before {
+  position: relative;
+  right: 8px;
+  top: -3px;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.header__action--signup {
+  min-width: 104px;
+  line-height: 44px;
+  font-size: 1.6rem;
+}
+
+.header__action--login {
+  margin-right: 7px;
 }

@@ -81,6 +81,15 @@ a {
   border-color: #2e80ce;
   color: #fff;
 }
+
+/* các thẻ này sẽ kế thừa thuộc tính kiểu chữ và cỡ chữ của thẻ cha */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
 /* ===========header============== */
 .header {
   padding-top: 30px;
@@ -600,10 +609,166 @@ a {
 .blog-item__more {
   display: inline-block;
   margin-top: 12px;
-  color: #2E80CE;
+  color: #2e80ce;
   font-family: Sora;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+/* ============appoinment============ */
+.appoiment {
+  margin-top: 85px;
+}
+
+.appoinment__inner {
+  padding: 100px 178px;
+  background: #f6fbff;
+  text-align: center;
+}
+
+.appoinment__heading::after {
+  margin: 18px auto 0;
+  content: "";
+  display: block;
+  width: 136px;
+  height: 2px;
+  background: #2e80ce;
+}
+
+.appoinment__desc {
+  margin: 18px auto 0;
+  max-width: 617px;
+}
+
+.appoinment__btn {
+  margin-top: 18px;
+}
+
+/* ===================footer=================== */
+.footer {
+  margin-top: 85px;
+  padding-top: 100px;
+  background: #10375c;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+
+.footer__desc {
+  margin-top: 21px;
+  color: #a9b3bb;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.footer__heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer__list {
+  /* khoảng đệm bên trên là 20 dưới 28 trái phải 0*/
+  margin: 20px 0 28px;
+}
+
+.footer__link {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  white-space: nowrap; /*các chữ không xuống hàng*/
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__item {
+  margin-top: 10px;
+}
+
+.footer__social {
+  margin: 20px 0 28px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer__social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2e80ce;
+  background: #fff;
+  transition: 0.25s;
+}
+
+.footer__social-btn:hover {
+  background: #2e80ce;
+  color: #fff;
+}
+
+.footer-form {
+  display: flex;
+  column-gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-form-input {
+  width: 212px;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-form-input::placeholder {
+  color: #9ca8b1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.footer-form__sumbit {
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  background: #2e80ce;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+  border: none;
+}
+
+.footer-form__sumbit:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.footer__copyright {
+  border-top: 1px solid #406181;
+}
+
+.footer__copyright-text {
+  padding: 28px 0 42px;
+  color: #aab3ba;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
 }

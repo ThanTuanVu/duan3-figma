@@ -27,8 +27,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap"
         rel="stylesheet">
+    <!-- link reset css -->
     <link rel="stylesheet" href="./assets/resset.css">
+    <!-- link style css -->
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- link responsive css -->
+    <link rel="stylesheet" href="./assets/responsive.css">
     <title>Dự án 3</title>
 </head>
 
@@ -39,21 +43,21 @@
             <div class="main-content">
                 <div class="header-top">
                     <!-- logo -->
-                    <a href=""><img src="./assets/icon/logo-shine.svg" alt="Shine" class="logo"></a>
+                    <a href=""><img src="./assets/icon/logo-shine.svg" alt="Shine" class="logo header__logo"></a>
                     <!-- nav -->
-                    <nav>
-                        <ul class="nav__list">
+                    <nav class="navbar">
+                        <ul class="nav__list" id="nav__list--pc">
                             <li class="nav--item">
-                                <a href="" class="nav__link nav__link--active">Home</a>
+                                <a href="#!" class="nav__link nav__link--active">Home</a>
                             </li>
                             <li class="nav__item">
-                                <a href="" class="nav__link">Services</a>
+                                <a href="#!" class="nav__link">Services</a>
                             </li>
                             <li class="nav__item">
-                                <a href="" class="nav__link">About</a>
+                                <a href="#!" class="nav__link">About</a>
                             </li>
                             <li class="nav__item">
-                                <a href="" class="nav__link">Doctors</a>
+                                <a href="#!" class="nav__link">Doctors</a>
                             </li>
                         </ul>
                     </nav>
@@ -89,6 +93,58 @@
         </div>
     </header>
 
+    <!-- mobile header -->
+    <div class="mobile__header">
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+        <label for="menu-checkbox">
+            <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="currentColor"
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+        </label>
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+
+        <!-- menu-content -->
+        <div class="menu-drawer">
+            <!-- menu-top -->
+            <div class="menu-drawer__top">
+                <!-- logo -->
+                <a href=""><img src="./assets/icon/logo-shine.svg" alt="Shine"></a>
+                <!-- icon close -->
+                <label for="menu-checkbox">
+                    <svg class="close__menu" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="currentColor"
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
+                </label>
+            </div>
+            <!-- nav mobile -->
+            <ul id="nav__list--mobile"></ul>
+            <!-- sử dụng js để copy navbar -->
+            <script>
+                const navPC = document.querySelector("#nav__list--pc")
+                const navMobile = document.querySelector("#nav__list--mobile")
+                //sao chép
+                navMobile.innerHTML = navPC.innerHTML;
+            </script>
+
+            <!-- separate ngăn cách -->
+            <div class="separate"></div>
+            <!-- cta action -->
+            <div class="show-on-mobile">
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Sign In</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Sign Up</a>
+                </li>
+            </div>
+        </div>
+    </div>
+
     <!-- main -->
     <main>
         <!-- our sevices -->
@@ -101,7 +157,7 @@
                 <div class="service__row">
                     <!-- service-left -->
                     <figure>
-                        <img src="./assets/img/doctor-top2.jpg" alt="" class="service__img">
+                        <img src="./assets/img/doctor-service.jpg" alt="" class="service__img">
                     </figure>
                     <!-- service-right -->
                     <div class="service__list">
@@ -405,7 +461,7 @@
             <!-- top-footer -->
             <div class="footer__top">
                 <!-- column 1 -->
-                <div class="footer__column">
+                <div class="footer__column footer__hidden--tablet">
                     <!-- logo -->
                     <a href=""><img src="./assets/icon/logo-shine.svg" alt="Shine" class="logo"></a>
                     <p class="footer__desc">Exceptional dental care for all ages. Your great smile begins with a great

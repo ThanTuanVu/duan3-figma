@@ -306,19 +306,6 @@ select {
   background: #f6fbff;
 }
 
-.work-item {
-  width: 370px;
-  height: 402px;
-  border-radius: 4px;
-  border: 16px solid #eaf6ff;
-  padding: 43px 42px;
-}
-
-.work-item:hover {
-  border: 16px solid #2e80ce;
-  transform: translateY(-16px);
-}
-
 .work__desc {
   width: 468px;
 }
@@ -333,6 +320,20 @@ select {
   column-gap: 30px;
 }
 
+.work-item {
+  padding: 43px;
+  border-radius: 4px;
+  background: #fff;
+  border: 16px solid #eaf6ff;
+  transition: 0.25s;
+}
+
+.work-item:hover {
+  border-color: #2e80ce;
+  transform: translateY(-16px);
+}
+
+
 .work-item__heading {
   margin-top: 18px;
   color: #10375c;
@@ -343,7 +344,6 @@ select {
 
 .work-item__desc {
   margin-top: 28px;
-  width: 254px;
   color: #575f66;
   font-size: 1.6rem;
   font-weight: 300;
@@ -491,7 +491,7 @@ select {
 }
 
 .install__content {
-  width: 586px;
+  min-width: 586px;
 }
 
 .install__heading {
